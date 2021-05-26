@@ -15,8 +15,6 @@ export class LoginComponent implements OnInit {
   invalidLogin = false
 
   //Router
-
-
   constructor(
     private router: Router, 
     private hardcodedAuthenticationService: HardcodedAuthenticationService,) { }
@@ -25,7 +23,6 @@ export class LoginComponent implements OnInit {
   }
 
   handleLogin(){
-    //console.log(this.username)
     if (this.hardcodedAuthenticationService.authenticate(this.username, this.password)){
       //Redict to Welcome Page
       this.router.navigate(['welcome', this.username])
